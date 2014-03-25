@@ -1,0 +1,8 @@
+{
+	"name": "Java support for twist2",
+	"command": {
+		"windows": "twist-java.bat",
+		"linux": "twist-java.sh",
+		"darwin": "java/twist-java.sh"
+	}
+}
