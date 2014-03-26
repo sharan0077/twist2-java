@@ -1,3 +1,4 @@
+package com.thoughtworks.twist2;
 
 interface StringToPrimitiveConverter {
     Object convert(String source);

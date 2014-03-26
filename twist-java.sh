@@ -44,4 +44,4 @@ else
     fi
 fi
 
-java -classpath "$CLASSPATH" TwistRuntime
+java -classpath "$CLASSPATH" com.thoughtworks.twist2.TwistRuntime

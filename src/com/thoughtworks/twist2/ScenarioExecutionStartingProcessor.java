@@ -1,3 +1,5 @@
+package com.thoughtworks.twist2;
+
 import main.Messages;
 
 public class ScenarioExecutionStartingProcessor implements IMessageProcessor {

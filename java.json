@@ -1,8 +1,13 @@
 {
 	"name": "Java support for twist2",
-	"command": {
+	"run": {
 		"windows": "twist-java.bat",
 		"linux": "twist-java.sh",
-		"darwin": "java/twist-java.sh"
-	}
+		"darwin": "twist-java.sh"
+	},
+	"init": {
+        "windows": "twist-java.bat",
+        "linux": "twist-java-project-init.sh",
+        "darwin": "twist-java-project-init.sh"
+    }
 }

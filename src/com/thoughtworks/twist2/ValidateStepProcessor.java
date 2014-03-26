@@ -1,3 +1,5 @@
+package com.thoughtworks.twist2;
+
 import static main.Messages.Message;
 import static main.Messages.Message.MessageType;
 import static main.Messages.StepValidateResponse;

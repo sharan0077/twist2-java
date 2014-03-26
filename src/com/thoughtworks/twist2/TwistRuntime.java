@@ -1,5 +1,5 @@
-import com.google.common.collect.ImmutableSet;
-import com.google.common.reflect.ClassPath;
+package com.thoughtworks.twist2;
+
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.CodedOutputStream;
 import main.Messages;
@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.Socket;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Set;
 

@@ -1,3 +1,5 @@
+package com.thoughtworks.twist2;
+
 import com.google.protobuf.ByteString;
 
 import javax.imageio.ImageIO;
