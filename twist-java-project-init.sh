@@ -19,11 +19,3 @@ else
     fi
     cp "$SKEL_FILE" src
 fi
-
-
-
-
-
-
-
-
