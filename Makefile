@@ -22,4 +22,6 @@ install:
 	install -m 755 -d $(prefix)/share/$(PROGRAM_NAME)/languages
 	install -m 644 java.json $(prefix)/share/$(PROGRAM_NAME)/languages
 	install -m 755 -d $(prefix)/share/$(PROGRAM_NAME)/skel/java
-	install -m 644 skel/* $(prefix)/share/$(PROGRAM_NAME)/skel/java
+	install -m 755 -d $(prefix)/share/$(PROGRAM_NAME)/skel/env
+	install -m 644 skel/StepImplementation.java $(prefix)/share/$(PROGRAM_NAME)/skel/java
+	install -m 644 skel/classpath.json $(prefix)/share/$(PROGRAM_NAME)/skel/env

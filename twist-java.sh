@@ -3,6 +3,8 @@
 PROJECT_ROOT=`pwd`
 LIBPATH=""
 
+echo "$test_scope"
+
 if [ -d "/usr/local/lib/twist2/java" ]; then
     LIBPATH="/usr/local/lib/twist2/java"
 else
@@ -16,31 +18,39 @@ if [ "$LIBPATH" = "" ]; then
     exit 1
 fi
 
-# Look for IntelliJ out directory
-INTELLIJ_OUT_DIR=""
-if [ -d "$PROJECT_ROOT/out/production" ]; then
-    cd "$PROJECT_ROOT/out/production"
-    for entry in *
-    do
-        if [ "$INTELLIJ_OUT_DIR" = "" ]; then
-            INTELLIJ_OUT_DIR="$PROJECT_ROOT/out/production/$entry"
-        else
-            INTELLIJ_OUT_DIR="$INTELLIJ_OUT_DIR:$PROJECT_ROOT/out/production/$entry"
-        fi
-    done
-fi
-
 CLASSPATH="$LIBPATH/*:$LIBPATH/libs/*"
 
-if [ ! "$INTELLIJ_OUT_DIR" = "" ]; then
-    CLASSPATH="$CLASSPATH:$INTELLIJ_OUT_DIR"
+if [ ! "$twist2_java_additional_libs" = "" ]; then
+    CLASSPATH="$CLASSPATH:$twist2_java_additional_libs"
+fi
+
+if [ ! "$twist2_java_classpath" = "" ]; then
+    CLASSPATH="$CLASSPATH:$twist2_java_classpath"
 else
-    # Looking for a bin directory where eclipse compiles files
-    if [ -d "$PROJECT_ROOT/bin" ]; then
-        CLASSPATH="$CLASSPATH:$PROJECT_ROOT/bin"
+    # Look for IntelliJ out directory
+    INTELLIJ_OUT_DIR=""
+    if [ -d "$PROJECT_ROOT/out/production" ]; then
+        cd "$PROJECT_ROOT/out/production"
+        for entry in *
+        do
+            if [ "$INTELLIJ_OUT_DIR" = "" ]; then
+                INTELLIJ_OUT_DIR="$PROJECT_ROOT/out/production/$entry"
+            else
+                INTELLIJ_OUT_DIR="$INTELLIJ_OUT_DIR:$PROJECT_ROOT/out/production/$entry"
+            fi
+        done
+    fi
+
+    if [ ! "$INTELLIJ_OUT_DIR" = "" ]; then
+        CLASSPATH="$CLASSPATH:$INTELLIJ_OUT_DIR"
     else
-        echo "Failed to find the compiled classes. Set additional_classpath variable"
-        exit 1
+        # Looking for a bin directory where eclipse compiles files
+        if [ -d "$PROJECT_ROOT/bin" ]; then
+            CLASSPATH="$CLASSPATH:$PROJECT_ROOT/bin"
+        else
+            echo "Failed to find the compiled classes. Set 'twist2_java_classpath' in env/default/classpath.json if you use non-standard output directory"
+            exit 1
+        fi
     fi
 fi
 
