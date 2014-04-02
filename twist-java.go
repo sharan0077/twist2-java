@@ -4,7 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"github.com/twist2/common"
 	"os"
 	"os/exec"
 	"path"
@@ -13,8 +13,6 @@ import (
 )
 
 const (
-	newDirectoryPermissions   = 0755
-	newFilePermissions        = 0644
 	executable_path           = "twist2_java_executable"
 	additional_libs_env_name  = "twist2_java_additional_libs"
 	classpath_env_name        = "twist2_java_classpath"
@@ -35,30 +33,10 @@ var projectRoot = ""
 var start = flag.Bool("start", false, "Start the java runner")
 var initialize = flag.Bool("init", false, "Initialize the java runner")
 
-func dirExists(dirPath string) bool {
-	stat, err := os.Stat(dirPath)
-	if err == nil && stat.IsDir() {
-		return true
-	}
-
-	return false
-}
-
-func fileExists(path string) bool {
-	_, err := os.Stat(path)
-	if err == nil {
-		return true
-	}
-	if os.IsNotExist(err) {
-		return false
-	}
-	return false
-}
-
 func getInstallationPath() string {
 	possibleInstallationPaths := []string{"/usr/local/lib/twist2/java", "/usr/lib/twist2/java"}
 	for _, p := range possibleInstallationPaths {
-		if dirExists(p) {
+		if common.DirExists(p) {
 			return p
 		}
 	}
@@ -69,7 +47,7 @@ func getInstallationPath() string {
 func getInstallationSharePath() string {
 	possibleInstallationPaths := []string{"/usr/local/share/twist2", "/usr/share/twist2"}
 	for _, p := range possibleInstallationPaths {
-		if dirExists(p) {
+		if common.DirExists(p) {
 			return p
 		}
 	}
@@ -88,7 +66,7 @@ func getProjectRoot() string {
 
 func getIntelliJClasspath() string {
 	intellijOutDir := path.Join(getProjectRoot(), "out", "production")
-	if !dirExists(intellijOutDir) {
+	if !common.DirExists(intellijOutDir) {
 		return ""
 	}
 
@@ -110,7 +88,7 @@ func getIntelliJClasspath() string {
 
 func getEclipseClasspath() string {
 	eclipseOutDir := path.Join(getProjectRoot(), "bin")
-	if !dirExists(eclipseOutDir) {
+	if !common.DirExists(eclipseOutDir) {
 		return ""
 	}
 
@@ -137,24 +115,6 @@ func getClassPathForVariable(envVariableName string) string {
 	return cp
 }
 
-func copyFile(src, dest string) error {
-	if !fileExists(src) {
-		return errors.New(fmt.Sprintf("%s doesn't exist", src))
-	}
-
-	b, err := ioutil.ReadFile(src)
-	if err != nil {
-		return err
-	}
-
-	err = ioutil.WriteFile(dest, b, newFilePermissions)
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
-
 type initializerFunc func()
 
 func showMessage(action, filename string) {
@@ -163,7 +123,7 @@ func showMessage(action, filename string) {
 
 func createSrcDirectory() {
 	showMessage("create", "src/")
-	if !dirExists("src") {
+	if !common.DirExists("src") {
 		err := os.Mkdir("src", 0755)
 		if err != nil {
 			fmt.Printf("Failed to make directory. %s\n", err.Error())
@@ -176,11 +136,11 @@ func createSrcDirectory() {
 func createStepImplementationClass() {
 	destFile := path.Join("src", step_implementation_class)
 	showMessage("create", destFile)
-	if fileExists(destFile) {
+	if common.FileExists(destFile) {
 		showMessage("skip", destFile)
 	} else {
 		srcFile := path.Join(getInstallationSharePath(), "skel", "java", step_implementation_class)
-		err := copyFile(srcFile, destFile)
+		err := common.CopyFile(srcFile, destFile)
 		if err != nil {
 			showMessage("error", fmt.Sprintf("Failed to copy %s. %s", srcFile, err.Error()))
 		}
@@ -190,11 +150,11 @@ func createStepImplementationClass() {
 func createJavaJSON() {
 	destFile := path.Join("env", "default", "java.json")
 	showMessage("create", destFile)
-	if fileExists(destFile) {
+	if common.FileExists(destFile) {
 		showMessage("skip", destFile)
 	} else {
 		srcFile := path.Join(getInstallationSharePath(), "skel", "env", "java.json")
-		err := copyFile(srcFile, destFile)
+		err := common.CopyFile(srcFile, destFile)
 		if err != nil {
 			showMessage("error", fmt.Sprintf("Failed to copy %s. %s", srcFile, err.Error()))
 		}
