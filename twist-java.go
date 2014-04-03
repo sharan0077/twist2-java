@@ -198,6 +198,11 @@ func main() {
 				fmt.Println("These variables can be set as environment variables or specify it in env/default/java.json file")
 				os.Exit(2)
 			}
+
+			additionalLibs := getClassPathForVariable(additional_libs_env_name)
+			if additionalLibs != "" {
+				appendClasspath(&cp, additionalLibs)
+			}
 		}
 
 		javaPath := os.Getenv(executable_path)
