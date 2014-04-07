@@ -55,17 +55,8 @@ func getInstallationSharePath() string {
 	panic(errors.New("Can't find installation files"))
 }
 
-func getProjectRoot() string {
-	pwd, err := os.Getwd()
-	if err != nil {
-		panic(err)
-	}
-
-	return pwd
-}
-
 func getIntelliJClasspath() string {
-	intellijOutDir := path.Join(getProjectRoot(), "out", "production")
+	intellijOutDir := path.Join(common.GetProjectRoot(), "out", "production")
 	if !common.DirExists(intellijOutDir) {
 		return ""
 	}
@@ -87,7 +78,7 @@ func getIntelliJClasspath() string {
 }
 
 func getEclipseClasspath() string {
-	eclipseOutDir := path.Join(getProjectRoot(), "bin")
+	eclipseOutDir := path.Join(common.GetProjectRoot(), "bin")
 	if !common.DirExists(eclipseOutDir) {
 		return ""
 	}
