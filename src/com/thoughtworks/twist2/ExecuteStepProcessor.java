@@ -30,6 +30,7 @@ public class ExecuteStepProcessor implements IMessageProcessor {
         primitiveConverters.put(Float.class, new StringToFloatConverter());
         primitiveConverters.put(double.class, new StringToDoubleConverter());
         primitiveConverters.put(Double.class, new StringToDoubleConverter());
+        primitiveConverters.put(Table.class, new TableConverter());
     }
 
     @Override
@@ -84,7 +85,7 @@ public class ExecuteStepProcessor implements IMessageProcessor {
         return output.toString();
     }
 
-    private void execute(String stepText, List<String> args) throws Exception {
+    private void execute(String stepText, List<Argument> args) throws Exception {
         Method method = StepRegistry.get(stepText);
         Object classInstance = methodToClassInstanceMap.get(method.getDeclaringClass());
         if (classInstance == null) {

@@ -98,7 +98,7 @@ public class TwistRuntime {
 
     public static void main(String[] args) throws Exception {
         HashMap<MessageType, IMessageProcessor> messageProcessors = new HashMap<MessageType, IMessageProcessor>() {{
-            put(ExecutionStarting, new ScenarioExecutionStartingProcessor());
+            put(ExecutionStarting, new SpecificationExecutionStartingProcessor());
             put(ExecuteStep, new ExecuteStepProcessor());
             put(ExecutionEnding, new ExecutionEndingProcessor());
             put(StepValidateRequest, new ValidateStepProcessor());
