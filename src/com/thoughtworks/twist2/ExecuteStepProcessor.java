@@ -92,7 +92,6 @@ public class ExecuteStepProcessor implements IMessageProcessor {
             classInstance = Class.forName(method.getDeclaringClass().getName()).newInstance();
             methodToClassInstanceMap.put(method.getDeclaringClass(), classInstance);
         }
-
         if (args != null && args.size() > 0) {
             Object[] parameters = new Object[args.size()];
             Class<?>[] parameterTypes = method.getParameterTypes();
@@ -102,7 +101,7 @@ public class ExecuteStepProcessor implements IMessageProcessor {
                     parameters[i] = primitiveConverters.get(parameterType).convert(args.get(i));
                 }
                 else {
-                    parameters[i] = args.get(i);
+                    parameters[i] = args.get(i).getValue();
                 }
             }
             method.invoke(classInstance, parameters);
