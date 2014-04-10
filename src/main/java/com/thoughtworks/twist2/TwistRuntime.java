@@ -116,10 +116,11 @@ public class TwistRuntime {
                 .addUrls(ClasspathHelper.forJavaClassPath());
         Reflections reflections = new Reflections(config);
         Set<Method> stepImplementations = reflections.getMethodsAnnotatedWith(Step.class);
+        StepValueExtractor stepValueExtractor = new StepValueExtractor();
         for (Method method : stepImplementations) {
             Step annotation = method.getAnnotation(Step.class);
             if (annotation != null) {
-                StepRegistry.addStepImplementation(annotation.value(), method);
+                StepRegistry.addStepImplementation(stepValueExtractor.getFor(annotation.value()), method);
             }
         }
     }

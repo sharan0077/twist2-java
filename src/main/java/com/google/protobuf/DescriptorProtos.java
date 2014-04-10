@@ -117,14 +117,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorSet_descriptor;
+      return internal_static_google_protobuf_FileDescriptorSet_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorSet_fieldAccessorTable
+      return internal_static_google_protobuf_FileDescriptorSet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.FileDescriptorSet.class, com.google.protobuf.DescriptorProtos.FileDescriptorSet.Builder.class);
+                  com.google.protobuf.DescriptorProtos.FileDescriptorSet.class, com.google.protobuf.DescriptorProtos.FileDescriptorSet.Builder.class);
     }
 
     public static com.google.protobuf.Parser<FileDescriptorSet> PARSER =
@@ -306,14 +306,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.FileDescriptorSetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorSet_descriptor;
+        return internal_static_google_protobuf_FileDescriptorSet_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorSet_fieldAccessorTable
+        return internal_static_google_protobuf_FileDescriptorSet_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.FileDescriptorSet.class, com.google.protobuf.DescriptorProtos.FileDescriptorSet.Builder.class);
+                    com.google.protobuf.DescriptorProtos.FileDescriptorSet.class, com.google.protobuf.DescriptorProtos.FileDescriptorSet.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.FileDescriptorSet.newBuilder()
@@ -327,7 +327,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getFileFieldBuilder();
         }
       }
@@ -352,11 +352,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorSet_descriptor;
+        return internal_static_google_protobuf_FileDescriptorSet_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.FileDescriptorSet getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.FileDescriptorSet.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.FileDescriptorSet build() {
@@ -393,7 +393,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.FileDescriptorSet other) {
-        if (other == com.google.protobuf.DescriptorProtos.FileDescriptorSet.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (fileBuilder_ == null) {
           if (!other.file_.isEmpty()) {
             if (file_.isEmpty()) {
@@ -413,7 +413,7 @@ public final class DescriptorProtos {
               file_ = other.file_;
               bitField0_ = (bitField0_ & ~0x00000001);
               fileBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getFileFieldBuilder() : null;
             } else {
               fileBuilder_.addAllMessages(other.file_);
@@ -1229,14 +1229,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorProto_descriptor;
+      return internal_static_google_protobuf_FileDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_FileDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.FileDescriptorProto.class, com.google.protobuf.DescriptorProtos.FileDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.FileDescriptorProto.class, com.google.protobuf.DescriptorProtos.FileDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<FileDescriptorProto> PARSER =
@@ -1959,14 +1959,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.FileDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorProto_descriptor;
+        return internal_static_google_protobuf_FileDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_FileDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.FileDescriptorProto.class, com.google.protobuf.DescriptorProtos.FileDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.FileDescriptorProto.class, com.google.protobuf.DescriptorProtos.FileDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.FileDescriptorProto.newBuilder()
@@ -1980,7 +1980,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getMessageTypeFieldBuilder();
           getEnumTypeFieldBuilder();
           getServiceFieldBuilder();
@@ -2050,11 +2050,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileDescriptorProto_descriptor;
+        return internal_static_google_protobuf_FileDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.FileDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.FileDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.FileDescriptorProto build() {
@@ -2160,7 +2160,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.FileDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.FileDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -2220,7 +2220,7 @@ public final class DescriptorProtos {
               messageType_ = other.messageType_;
               bitField0_ = (bitField0_ & ~0x00000020);
               messageTypeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getMessageTypeFieldBuilder() : null;
             } else {
               messageTypeBuilder_.addAllMessages(other.messageType_);
@@ -2246,7 +2246,7 @@ public final class DescriptorProtos {
               enumType_ = other.enumType_;
               bitField0_ = (bitField0_ & ~0x00000040);
               enumTypeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getEnumTypeFieldBuilder() : null;
             } else {
               enumTypeBuilder_.addAllMessages(other.enumType_);
@@ -2272,7 +2272,7 @@ public final class DescriptorProtos {
               service_ = other.service_;
               bitField0_ = (bitField0_ & ~0x00000080);
               serviceBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getServiceFieldBuilder() : null;
             } else {
               serviceBuilder_.addAllMessages(other.service_);
@@ -2298,7 +2298,7 @@ public final class DescriptorProtos {
               extension_ = other.extension_;
               bitField0_ = (bitField0_ & ~0x00000100);
               extensionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getExtensionFieldBuilder() : null;
             } else {
               extensionBuilder_.addAllMessages(other.extension_);
@@ -4458,7 +4458,7 @@ public final class DescriptorProtos {
                 nestedType_ = new java.util.ArrayList<com.google.protobuf.DescriptorProtos.DescriptorProto>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              nestedType_.add(input.readMessage(com.google.protobuf.DescriptorProtos.DescriptorProto.PARSER, extensionRegistry));
+              nestedType_.add(input.readMessage(PARSER, extensionRegistry));
               break;
             }
             case 34: {
@@ -4527,14 +4527,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_descriptor;
+      return internal_static_google_protobuf_DescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_DescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.DescriptorProto.class, com.google.protobuf.DescriptorProtos.DescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.DescriptorProto.class, com.google.protobuf.DescriptorProtos.DescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<DescriptorProto> PARSER =
@@ -4650,14 +4650,14 @@ public final class DescriptorProtos {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
+        return internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_ExtensionRange_fieldAccessorTable
+        return internal_static_google_protobuf_DescriptorProto_ExtensionRange_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.class, com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.Builder.class);
+                    com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.class, com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.Builder.class);
       }
 
       public static com.google.protobuf.Parser<ExtensionRange> PARSER =
@@ -4833,14 +4833,14 @@ public final class DescriptorProtos {
          implements com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRangeOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
+          return internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_ExtensionRange_fieldAccessorTable
+          return internal_static_google_protobuf_DescriptorProto_ExtensionRange_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.class, com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.Builder.class);
+                      com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.class, com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.Builder.class);
         }
 
         // Construct using com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.newBuilder()
@@ -4854,7 +4854,7 @@ public final class DescriptorProtos {
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -4876,11 +4876,11 @@ public final class DescriptorProtos {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
+          return internal_static_google_protobuf_DescriptorProto_ExtensionRange_descriptor;
         }
 
         public com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange getDefaultInstanceForType() {
-          return com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.getDefaultInstance();
+          return getDefaultInstance();
         }
 
         public com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange build() {
@@ -4918,7 +4918,7 @@ public final class DescriptorProtos {
         }
 
         public Builder mergeFrom(com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange other) {
-          if (other == com.google.protobuf.DescriptorProtos.DescriptorProto.ExtensionRange.getDefaultInstance()) return this;
+          if (other == getDefaultInstance()) return this;
           if (other.hasStart()) {
             setStart(other.getStart());
           }
@@ -5474,14 +5474,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.DescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_descriptor;
+        return internal_static_google_protobuf_DescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_DescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.DescriptorProto.class, com.google.protobuf.DescriptorProtos.DescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.DescriptorProto.class, com.google.protobuf.DescriptorProtos.DescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.DescriptorProto.newBuilder()
@@ -5495,7 +5495,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getFieldFieldBuilder();
           getExtensionFieldBuilder();
           getNestedTypeFieldBuilder();
@@ -5557,11 +5557,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_DescriptorProto_descriptor;
+        return internal_static_google_protobuf_DescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.DescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.DescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.DescriptorProto build() {
@@ -5648,7 +5648,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.DescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.DescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -5673,7 +5673,7 @@ public final class DescriptorProtos {
               field_ = other.field_;
               bitField0_ = (bitField0_ & ~0x00000002);
               fieldBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getFieldFieldBuilder() : null;
             } else {
               fieldBuilder_.addAllMessages(other.field_);
@@ -5699,7 +5699,7 @@ public final class DescriptorProtos {
               extension_ = other.extension_;
               bitField0_ = (bitField0_ & ~0x00000004);
               extensionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getExtensionFieldBuilder() : null;
             } else {
               extensionBuilder_.addAllMessages(other.extension_);
@@ -5725,7 +5725,7 @@ public final class DescriptorProtos {
               nestedType_ = other.nestedType_;
               bitField0_ = (bitField0_ & ~0x00000008);
               nestedTypeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getNestedTypeFieldBuilder() : null;
             } else {
               nestedTypeBuilder_.addAllMessages(other.nestedType_);
@@ -5751,7 +5751,7 @@ public final class DescriptorProtos {
               enumType_ = other.enumType_;
               bitField0_ = (bitField0_ & ~0x00000010);
               enumTypeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getEnumTypeFieldBuilder() : null;
             } else {
               enumTypeBuilder_.addAllMessages(other.enumType_);
@@ -5777,7 +5777,7 @@ public final class DescriptorProtos {
               extensionRange_ = other.extensionRange_;
               bitField0_ = (bitField0_ & ~0x00000020);
               extensionRangeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getExtensionRangeFieldBuilder() : null;
             } else {
               extensionRangeBuilder_.addAllMessages(other.extensionRange_);
@@ -6606,7 +6606,7 @@ public final class DescriptorProtos {
        */
       public com.google.protobuf.DescriptorProtos.DescriptorProto.Builder addNestedTypeBuilder() {
         return getNestedTypeFieldBuilder().addBuilder(
-            com.google.protobuf.DescriptorProtos.DescriptorProto.getDefaultInstance());
+            getDefaultInstance());
       }
       /**
        * <code>repeated .google.protobuf.DescriptorProto nested_type = 3;</code>
@@ -6614,7 +6614,7 @@ public final class DescriptorProtos {
       public com.google.protobuf.DescriptorProtos.DescriptorProto.Builder addNestedTypeBuilder(
           int index) {
         return getNestedTypeFieldBuilder().addBuilder(
-            index, com.google.protobuf.DescriptorProtos.DescriptorProto.getDefaultInstance());
+            index, getDefaultInstance());
       }
       /**
        * <code>repeated .google.protobuf.DescriptorProto nested_type = 3;</code>
@@ -7555,14 +7555,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldDescriptorProto_descriptor;
+      return internal_static_google_protobuf_FieldDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_FieldDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.FieldDescriptorProto.class, com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.FieldDescriptorProto.class, com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<FieldDescriptorProto> PARSER =
@@ -8482,14 +8482,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.FieldDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldDescriptorProto_descriptor;
+        return internal_static_google_protobuf_FieldDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_FieldDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.FieldDescriptorProto.class, com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.FieldDescriptorProto.class, com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.FieldDescriptorProto.newBuilder()
@@ -8503,7 +8503,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getOptionsFieldBuilder();
         }
       }
@@ -8542,11 +8542,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldDescriptorProto_descriptor;
+        return internal_static_google_protobuf_FieldDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.FieldDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.FieldDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.FieldDescriptorProto build() {
@@ -8612,7 +8612,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.FieldDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.FieldDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -9508,14 +9508,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumDescriptorProto_descriptor;
+      return internal_static_google_protobuf_EnumDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_EnumDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.EnumDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.EnumDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<EnumDescriptorProto> PARSER =
@@ -9784,14 +9784,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.EnumDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumDescriptorProto_descriptor;
+        return internal_static_google_protobuf_EnumDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_EnumDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.EnumDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.EnumDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.EnumDescriptorProto.newBuilder()
@@ -9805,7 +9805,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getValueFieldBuilder();
           getOptionsFieldBuilder();
         }
@@ -9839,11 +9839,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumDescriptorProto_descriptor;
+        return internal_static_google_protobuf_EnumDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.EnumDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.EnumDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.EnumDescriptorProto build() {
@@ -9894,7 +9894,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.EnumDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.EnumDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -9919,7 +9919,7 @@ public final class DescriptorProtos {
               value_ = other.value_;
               bitField0_ = (bitField0_ & ~0x00000002);
               valueBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getValueFieldBuilder() : null;
             } else {
               valueBuilder_.addAllMessages(other.value_);
@@ -10544,14 +10544,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
+      return internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_EnumValueDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<EnumValueDescriptorProto> PARSER =
@@ -10794,14 +10794,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.EnumValueDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
+        return internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_EnumValueDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.class, com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.newBuilder()
@@ -10815,7 +10815,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getOptionsFieldBuilder();
         }
       }
@@ -10844,11 +10844,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
+        return internal_static_google_protobuf_EnumValueDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto build() {
@@ -10894,7 +10894,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.EnumValueDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -11329,14 +11329,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
+      return internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_ServiceDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.class, com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.class, com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<ServiceDescriptorProto> PARSER =
@@ -11605,14 +11605,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.ServiceDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
+        return internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_ServiceDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.class, com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.class, com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.newBuilder()
@@ -11626,7 +11626,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getMethodFieldBuilder();
           getOptionsFieldBuilder();
         }
@@ -11660,11 +11660,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
+        return internal_static_google_protobuf_ServiceDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.ServiceDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.ServiceDescriptorProto build() {
@@ -11715,7 +11715,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.ServiceDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.ServiceDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -11740,7 +11740,7 @@ public final class DescriptorProtos {
               method_ = other.method_;
               bitField0_ = (bitField0_ & ~0x00000002);
               methodBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getMethodFieldBuilder() : null;
             } else {
               methodBuilder_.addAllMessages(other.method_);
@@ -12405,14 +12405,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodDescriptorProto_descriptor;
+      return internal_static_google_protobuf_MethodDescriptorProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodDescriptorProto_fieldAccessorTable
+      return internal_static_google_protobuf_MethodDescriptorProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.MethodDescriptorProto.class, com.google.protobuf.DescriptorProtos.MethodDescriptorProto.Builder.class);
+                  com.google.protobuf.DescriptorProtos.MethodDescriptorProto.class, com.google.protobuf.DescriptorProtos.MethodDescriptorProto.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MethodDescriptorProto> PARSER =
@@ -12748,14 +12748,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.MethodDescriptorProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodDescriptorProto_descriptor;
+        return internal_static_google_protobuf_MethodDescriptorProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodDescriptorProto_fieldAccessorTable
+        return internal_static_google_protobuf_MethodDescriptorProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.MethodDescriptorProto.class, com.google.protobuf.DescriptorProtos.MethodDescriptorProto.Builder.class);
+                    com.google.protobuf.DescriptorProtos.MethodDescriptorProto.class, com.google.protobuf.DescriptorProtos.MethodDescriptorProto.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.MethodDescriptorProto.newBuilder()
@@ -12769,7 +12769,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getOptionsFieldBuilder();
         }
       }
@@ -12800,11 +12800,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodDescriptorProto_descriptor;
+        return internal_static_google_protobuf_MethodDescriptorProto_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.MethodDescriptorProto getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.MethodDescriptorProto.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.MethodDescriptorProto build() {
@@ -12854,7 +12854,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.MethodDescriptorProto other) {
-        if (other == com.google.protobuf.DescriptorProtos.MethodDescriptorProto.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -13685,14 +13685,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileOptions_descriptor;
+      return internal_static_google_protobuf_FileOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileOptions_fieldAccessorTable
+      return internal_static_google_protobuf_FileOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.FileOptions.class, com.google.protobuf.DescriptorProtos.FileOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.FileOptions.class, com.google.protobuf.DescriptorProtos.FileOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<FileOptions> PARSER =
@@ -14433,14 +14433,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.FileOptions, Builder> implements com.google.protobuf.DescriptorProtos.FileOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileOptions_descriptor;
+        return internal_static_google_protobuf_FileOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileOptions_fieldAccessorTable
+        return internal_static_google_protobuf_FileOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.FileOptions.class, com.google.protobuf.DescriptorProtos.FileOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.FileOptions.class, com.google.protobuf.DescriptorProtos.FileOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.FileOptions.newBuilder()
@@ -14454,7 +14454,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -14497,11 +14497,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FileOptions_descriptor;
+        return internal_static_google_protobuf_FileOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.FileOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.FileOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.FileOptions build() {
@@ -14576,7 +14576,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.FileOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.FileOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasJavaPackage()) {
           bitField0_ |= 0x00000001;
           javaPackage_ = other.javaPackage_;
@@ -14629,7 +14629,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000200);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -15865,14 +15865,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MessageOptions_descriptor;
+      return internal_static_google_protobuf_MessageOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MessageOptions_fieldAccessorTable
+      return internal_static_google_protobuf_MessageOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.MessageOptions.class, com.google.protobuf.DescriptorProtos.MessageOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.MessageOptions.class, com.google.protobuf.DescriptorProtos.MessageOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MessageOptions> PARSER =
@@ -16181,14 +16181,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.MessageOptions, Builder> implements com.google.protobuf.DescriptorProtos.MessageOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MessageOptions_descriptor;
+        return internal_static_google_protobuf_MessageOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MessageOptions_fieldAccessorTable
+        return internal_static_google_protobuf_MessageOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.MessageOptions.class, com.google.protobuf.DescriptorProtos.MessageOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.MessageOptions.class, com.google.protobuf.DescriptorProtos.MessageOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.MessageOptions.newBuilder()
@@ -16202,7 +16202,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -16231,11 +16231,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MessageOptions_descriptor;
+        return internal_static_google_protobuf_MessageOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.MessageOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.MessageOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.MessageOptions build() {
@@ -16282,7 +16282,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.MessageOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.MessageOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasMessageSetWireFormat()) {
           setMessageSetWireFormat(other.getMessageSetWireFormat());
         }
@@ -16308,7 +16308,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000004);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -17233,14 +17233,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldOptions_descriptor;
+      return internal_static_google_protobuf_FieldOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldOptions_fieldAccessorTable
+      return internal_static_google_protobuf_FieldOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.FieldOptions.class, com.google.protobuf.DescriptorProtos.FieldOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.FieldOptions.class, com.google.protobuf.DescriptorProtos.FieldOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<FieldOptions> PARSER =
@@ -17874,14 +17874,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.FieldOptions, Builder> implements com.google.protobuf.DescriptorProtos.FieldOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldOptions_descriptor;
+        return internal_static_google_protobuf_FieldOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldOptions_fieldAccessorTable
+        return internal_static_google_protobuf_FieldOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.FieldOptions.class, com.google.protobuf.DescriptorProtos.FieldOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.FieldOptions.class, com.google.protobuf.DescriptorProtos.FieldOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.FieldOptions.newBuilder()
@@ -17895,7 +17895,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -17932,11 +17932,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_FieldOptions_descriptor;
+        return internal_static_google_protobuf_FieldOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.FieldOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.FieldOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.FieldOptions build() {
@@ -17999,7 +17999,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.FieldOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.FieldOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasCtype()) {
           setCtype(other.getCtype());
         }
@@ -18039,7 +18039,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000040);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -19113,14 +19113,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumOptions_descriptor;
+      return internal_static_google_protobuf_EnumOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumOptions_fieldAccessorTable
+      return internal_static_google_protobuf_EnumOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.EnumOptions.class, com.google.protobuf.DescriptorProtos.EnumOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.EnumOptions.class, com.google.protobuf.DescriptorProtos.EnumOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<EnumOptions> PARSER =
@@ -19361,14 +19361,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.EnumOptions, Builder> implements com.google.protobuf.DescriptorProtos.EnumOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumOptions_descriptor;
+        return internal_static_google_protobuf_EnumOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumOptions_fieldAccessorTable
+        return internal_static_google_protobuf_EnumOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.EnumOptions.class, com.google.protobuf.DescriptorProtos.EnumOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.EnumOptions.class, com.google.protobuf.DescriptorProtos.EnumOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.EnumOptions.newBuilder()
@@ -19382,7 +19382,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -19409,11 +19409,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumOptions_descriptor;
+        return internal_static_google_protobuf_EnumOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.EnumOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.EnumOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.EnumOptions build() {
@@ -19456,7 +19456,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.EnumOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.EnumOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (other.hasAllowAlias()) {
           setAllowAlias(other.getAllowAlias());
         }
@@ -19479,7 +19479,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000002);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -20025,14 +20025,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueOptions_descriptor;
+      return internal_static_google_protobuf_EnumValueOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueOptions_fieldAccessorTable
+      return internal_static_google_protobuf_EnumValueOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.EnumValueOptions.class, com.google.protobuf.DescriptorProtos.EnumValueOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.EnumValueOptions.class, com.google.protobuf.DescriptorProtos.EnumValueOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<EnumValueOptions> PARSER =
@@ -20238,14 +20238,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.EnumValueOptions, Builder> implements com.google.protobuf.DescriptorProtos.EnumValueOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueOptions_descriptor;
+        return internal_static_google_protobuf_EnumValueOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueOptions_fieldAccessorTable
+        return internal_static_google_protobuf_EnumValueOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.EnumValueOptions.class, com.google.protobuf.DescriptorProtos.EnumValueOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.EnumValueOptions.class, com.google.protobuf.DescriptorProtos.EnumValueOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.EnumValueOptions.newBuilder()
@@ -20259,7 +20259,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -20284,11 +20284,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_EnumValueOptions_descriptor;
+        return internal_static_google_protobuf_EnumValueOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.EnumValueOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.EnumValueOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.EnumValueOptions build() {
@@ -20325,7 +20325,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.EnumValueOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.EnumValueOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (uninterpretedOptionBuilder_ == null) {
           if (!other.uninterpretedOption_.isEmpty()) {
             if (uninterpretedOption_.isEmpty()) {
@@ -20345,7 +20345,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000001);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -20838,14 +20838,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceOptions_descriptor;
+      return internal_static_google_protobuf_ServiceOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceOptions_fieldAccessorTable
+      return internal_static_google_protobuf_ServiceOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.ServiceOptions.class, com.google.protobuf.DescriptorProtos.ServiceOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.ServiceOptions.class, com.google.protobuf.DescriptorProtos.ServiceOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<ServiceOptions> PARSER =
@@ -21051,14 +21051,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.ServiceOptions, Builder> implements com.google.protobuf.DescriptorProtos.ServiceOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceOptions_descriptor;
+        return internal_static_google_protobuf_ServiceOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceOptions_fieldAccessorTable
+        return internal_static_google_protobuf_ServiceOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.ServiceOptions.class, com.google.protobuf.DescriptorProtos.ServiceOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.ServiceOptions.class, com.google.protobuf.DescriptorProtos.ServiceOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.ServiceOptions.newBuilder()
@@ -21072,7 +21072,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -21097,11 +21097,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_ServiceOptions_descriptor;
+        return internal_static_google_protobuf_ServiceOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.ServiceOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.ServiceOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.ServiceOptions build() {
@@ -21138,7 +21138,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.ServiceOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.ServiceOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (uninterpretedOptionBuilder_ == null) {
           if (!other.uninterpretedOption_.isEmpty()) {
             if (uninterpretedOption_.isEmpty()) {
@@ -21158,7 +21158,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000001);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -21651,14 +21651,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodOptions_descriptor;
+      return internal_static_google_protobuf_MethodOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodOptions_fieldAccessorTable
+      return internal_static_google_protobuf_MethodOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.MethodOptions.class, com.google.protobuf.DescriptorProtos.MethodOptions.Builder.class);
+                  com.google.protobuf.DescriptorProtos.MethodOptions.class, com.google.protobuf.DescriptorProtos.MethodOptions.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MethodOptions> PARSER =
@@ -21864,14 +21864,14 @@ public final class DescriptorProtos {
           com.google.protobuf.DescriptorProtos.MethodOptions, Builder> implements com.google.protobuf.DescriptorProtos.MethodOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodOptions_descriptor;
+        return internal_static_google_protobuf_MethodOptions_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodOptions_fieldAccessorTable
+        return internal_static_google_protobuf_MethodOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.MethodOptions.class, com.google.protobuf.DescriptorProtos.MethodOptions.Builder.class);
+                    com.google.protobuf.DescriptorProtos.MethodOptions.class, com.google.protobuf.DescriptorProtos.MethodOptions.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.MethodOptions.newBuilder()
@@ -21885,7 +21885,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getUninterpretedOptionFieldBuilder();
         }
       }
@@ -21910,11 +21910,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_MethodOptions_descriptor;
+        return internal_static_google_protobuf_MethodOptions_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.MethodOptions getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.MethodOptions.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.MethodOptions build() {
@@ -21951,7 +21951,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.MethodOptions other) {
-        if (other == com.google.protobuf.DescriptorProtos.MethodOptions.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (uninterpretedOptionBuilder_ == null) {
           if (!other.uninterpretedOption_.isEmpty()) {
             if (uninterpretedOption_.isEmpty()) {
@@ -21971,7 +21971,7 @@ public final class DescriptorProtos {
               uninterpretedOption_ = other.uninterpretedOption_;
               bitField0_ = (bitField0_ & ~0x00000001);
               uninterpretedOptionBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getUninterpretedOptionFieldBuilder() : null;
             } else {
               uninterpretedOptionBuilder_.addAllMessages(other.uninterpretedOption_);
@@ -22567,14 +22567,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_descriptor;
+      return internal_static_google_protobuf_UninterpretedOption_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_fieldAccessorTable
+      return internal_static_google_protobuf_UninterpretedOption_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.UninterpretedOption.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.Builder.class);
+                  com.google.protobuf.DescriptorProtos.UninterpretedOption.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.Builder.class);
     }
 
     public static com.google.protobuf.Parser<UninterpretedOption> PARSER =
@@ -22703,14 +22703,14 @@ public final class DescriptorProtos {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
+        return internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_NamePart_fieldAccessorTable
+        return internal_static_google_protobuf_UninterpretedOption_NamePart_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.Builder.class);
+                    com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.Builder.class);
       }
 
       public static com.google.protobuf.Parser<NamePart> PARSER =
@@ -22929,14 +22929,14 @@ public final class DescriptorProtos {
          implements com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePartOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
+          return internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_NamePart_fieldAccessorTable
+          return internal_static_google_protobuf_UninterpretedOption_NamePart_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.Builder.class);
+                      com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.Builder.class);
         }
 
         // Construct using com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.newBuilder()
@@ -22950,7 +22950,7 @@ public final class DescriptorProtos {
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -22972,11 +22972,11 @@ public final class DescriptorProtos {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
+          return internal_static_google_protobuf_UninterpretedOption_NamePart_descriptor;
         }
 
         public com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart getDefaultInstanceForType() {
-          return com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.getDefaultInstance();
+          return getDefaultInstance();
         }
 
         public com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart build() {
@@ -23014,7 +23014,7 @@ public final class DescriptorProtos {
         }
 
         public Builder mergeFrom(com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart other) {
-          if (other == com.google.protobuf.DescriptorProtos.UninterpretedOption.NamePart.getDefaultInstance()) return this;
+          if (other == getDefaultInstance()) return this;
           if (other.hasNamePart()) {
             bitField0_ |= 0x00000001;
             namePart_ = other.namePart_;
@@ -23558,14 +23558,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.UninterpretedOptionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_descriptor;
+        return internal_static_google_protobuf_UninterpretedOption_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_fieldAccessorTable
+        return internal_static_google_protobuf_UninterpretedOption_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.UninterpretedOption.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.Builder.class);
+                    com.google.protobuf.DescriptorProtos.UninterpretedOption.class, com.google.protobuf.DescriptorProtos.UninterpretedOption.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.UninterpretedOption.newBuilder()
@@ -23579,7 +23579,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getNameFieldBuilder();
         }
       }
@@ -23616,11 +23616,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_UninterpretedOption_descriptor;
+        return internal_static_google_protobuf_UninterpretedOption_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.UninterpretedOption getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.UninterpretedOption.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.UninterpretedOption build() {
@@ -23683,7 +23683,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.UninterpretedOption other) {
-        if (other == com.google.protobuf.DescriptorProtos.UninterpretedOption.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (nameBuilder_ == null) {
           if (!other.name_.isEmpty()) {
             if (name_.isEmpty()) {
@@ -23703,7 +23703,7 @@ public final class DescriptorProtos {
               name_ = other.name_;
               bitField0_ = (bitField0_ & ~0x00000001);
               nameBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getNameFieldBuilder() : null;
             } else {
               nameBuilder_.addAllMessages(other.name_);
@@ -24668,14 +24668,14 @@ public final class DescriptorProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_descriptor;
+      return internal_static_google_protobuf_SourceCodeInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_fieldAccessorTable
+      return internal_static_google_protobuf_SourceCodeInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.protobuf.DescriptorProtos.SourceCodeInfo.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Builder.class);
+                  com.google.protobuf.DescriptorProtos.SourceCodeInfo.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Builder.class);
     }
 
     public static com.google.protobuf.Parser<SourceCodeInfo> PARSER =
@@ -25090,14 +25090,14 @@ public final class DescriptorProtos {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
+        return internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_Location_fieldAccessorTable
+        return internal_static_google_protobuf_SourceCodeInfo_Location_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.Builder.class);
+                    com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.Builder.class);
       }
 
       public static com.google.protobuf.Parser<Location> PARSER =
@@ -25632,14 +25632,14 @@ public final class DescriptorProtos {
          implements com.google.protobuf.DescriptorProtos.SourceCodeInfo.LocationOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
+          return internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_Location_fieldAccessorTable
+          return internal_static_google_protobuf_SourceCodeInfo_Location_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.Builder.class);
+                      com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.Builder.class);
         }
 
         // Construct using com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.newBuilder()
@@ -25653,7 +25653,7 @@ public final class DescriptorProtos {
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -25679,11 +25679,11 @@ public final class DescriptorProtos {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
+          return internal_static_google_protobuf_SourceCodeInfo_Location_descriptor;
         }
 
         public com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location getDefaultInstanceForType() {
-          return com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.getDefaultInstance();
+          return getDefaultInstance();
         }
 
         public com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location build() {
@@ -25731,7 +25731,7 @@ public final class DescriptorProtos {
         }
 
         public Builder mergeFrom(com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location other) {
-          if (other == com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location.getDefaultInstance()) return this;
+          if (other == getDefaultInstance()) return this;
           if (!other.path_.isEmpty()) {
             if (path_.isEmpty()) {
               path_ = other.path_;
@@ -26928,14 +26928,14 @@ public final class DescriptorProtos {
        implements com.google.protobuf.DescriptorProtos.SourceCodeInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_descriptor;
+        return internal_static_google_protobuf_SourceCodeInfo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_fieldAccessorTable
+        return internal_static_google_protobuf_SourceCodeInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.protobuf.DescriptorProtos.SourceCodeInfo.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Builder.class);
+                    com.google.protobuf.DescriptorProtos.SourceCodeInfo.class, com.google.protobuf.DescriptorProtos.SourceCodeInfo.Builder.class);
       }
 
       // Construct using com.google.protobuf.DescriptorProtos.SourceCodeInfo.newBuilder()
@@ -26949,7 +26949,7 @@ public final class DescriptorProtos {
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (alwaysUseFieldBuilders) {
           getLocationFieldBuilder();
         }
       }
@@ -26974,11 +26974,11 @@ public final class DescriptorProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.protobuf.DescriptorProtos.internal_static_google_protobuf_SourceCodeInfo_descriptor;
+        return internal_static_google_protobuf_SourceCodeInfo_descriptor;
       }
 
       public com.google.protobuf.DescriptorProtos.SourceCodeInfo getDefaultInstanceForType() {
-        return com.google.protobuf.DescriptorProtos.SourceCodeInfo.getDefaultInstance();
+        return getDefaultInstance();
       }
 
       public com.google.protobuf.DescriptorProtos.SourceCodeInfo build() {
@@ -27015,7 +27015,7 @@ public final class DescriptorProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.DescriptorProtos.SourceCodeInfo other) {
-        if (other == com.google.protobuf.DescriptorProtos.SourceCodeInfo.getDefaultInstance()) return this;
+        if (other == getDefaultInstance()) return this;
         if (locationBuilder_ == null) {
           if (!other.location_.isEmpty()) {
             if (location_.isEmpty()) {
@@ -27035,7 +27035,7 @@ public final class DescriptorProtos {
               location_ = other.location_;
               bitField0_ = (bitField0_ & ~0x00000001);
               locationBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                alwaysUseFieldBuilders ?
                    getLocationFieldBuilder() : null;
             } else {
               locationBuilder_.addAllMessages(other.location_);

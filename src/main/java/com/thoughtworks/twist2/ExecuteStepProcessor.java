@@ -1,6 +1,7 @@
 package com.thoughtworks.twist2;
 
 import com.google.protobuf.ByteString;
+import main.Messages;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -34,7 +35,7 @@ public class ExecuteStepProcessor implements IMessageProcessor {
     }
 
     @Override
-    public Message process(Message message) {
+    public Message process(Messages.Message message) {
         Message.Builder builder = process(message.getExecuteStepRequest());
         builder.setMessageId(message.getMessageId());
         return builder.build();

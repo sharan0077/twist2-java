@@ -1030,7 +1030,7 @@ public abstract class GeneratedMessage extends AbstractMessage
         final UnknownFieldSet.Builder unknownFields,
         final ExtensionRegistryLite extensionRegistry,
         final int tag) throws IOException {
-      return AbstractMessage.Builder.mergeFieldFrom(
+      return mergeFieldFrom(
         input, unknownFields, extensionRegistry, getDescriptorForType(),
         this, null, tag);
     }

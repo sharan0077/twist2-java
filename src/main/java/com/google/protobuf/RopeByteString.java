@@ -158,7 +158,7 @@ class RopeByteString extends ByteString {
       result = right;
     } else {
       int newLength = left.size() + right.size();
-      if (newLength < ByteString.CONCATENATE_BY_COPY_SIZE) {
+      if (newLength < CONCATENATE_BY_COPY_SIZE) {
         // Optimization from BAP95: For short (leaves in paper, but just short
         // here) total length, do a copy of data to a new leaf.
         result = concatenateBytes(left, right);
@@ -325,7 +325,7 @@ class RopeByteString extends ByteString {
     ByteString result;
     if (substringLength == 0) {
       // Empty substring
-      result = ByteString.EMPTY;
+      result = EMPTY;
     } else if (substringLength == totalLength) {
       // The whole string
       result = this;

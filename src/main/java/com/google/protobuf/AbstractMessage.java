@@ -30,10 +30,7 @@
 
 package com.google.protobuf;
 
-import com.google.protobuf.Descriptors.Descriptor;
-import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.GeneratedMessage.ExtendableBuilder;
-import com.google.protobuf.Internal.EnumLite;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,7 +49,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
   @SuppressWarnings("unchecked")
   public boolean isInitialized() {
     // Check that all required fields are present.
-    for (final FieldDescriptor field : getDescriptorForType().getFields()) {
+    for (final Descriptors.FieldDescriptor field : getDescriptorForType().getFields()) {
       if (field.isRequired()) {
         if (!hasField(field)) {
           return false;
@@ -61,10 +58,10 @@ public abstract class AbstractMessage extends AbstractMessageLite
     }
 
     // Check that embedded messages are initialized.
-    for (final Map.Entry<FieldDescriptor, Object> entry :
+    for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
         getAllFields().entrySet()) {
-      final FieldDescriptor field = entry.getKey();
-      if (field.getJavaType() == FieldDescriptor.JavaType.MESSAGE) {
+      final Descriptors.FieldDescriptor field = entry.getKey();
+      if (field.getJavaType() == Descriptors.FieldDescriptor.JavaType.MESSAGE) {
         if (field.isRepeated()) {
           for (final Message element : (List<Message>) entry.getValue()) {
             if (!element.isInitialized()) {
@@ -110,12 +107,12 @@ public abstract class AbstractMessage extends AbstractMessageLite
     final boolean isMessageSet =
         getDescriptorForType().getOptions().getMessageSetWireFormat();
 
-    for (final Map.Entry<FieldDescriptor, Object> entry :
+    for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
         getAllFields().entrySet()) {
-      final FieldDescriptor field = entry.getKey();
+      final Descriptors.FieldDescriptor field = entry.getKey();
       final Object value = entry.getValue();
       if (isMessageSet && field.isExtension() &&
-          field.getType() == FieldDescriptor.Type.MESSAGE &&
+          field.getType() == Descriptors.FieldDescriptor.Type.MESSAGE &&
           !field.isRepeated()) {
         output.writeMessageSetExtension(field.getNumber(), (Message) value);
       } else {
@@ -143,12 +140,12 @@ public abstract class AbstractMessage extends AbstractMessageLite
     final boolean isMessageSet =
         getDescriptorForType().getOptions().getMessageSetWireFormat();
 
-    for (final Map.Entry<FieldDescriptor, Object> entry :
+    for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
         getAllFields().entrySet()) {
-      final FieldDescriptor field = entry.getKey();
+      final Descriptors.FieldDescriptor field = entry.getKey();
       final Object value = entry.getValue();
       if (isMessageSet && field.isExtension() &&
-          field.getType() == FieldDescriptor.Type.MESSAGE &&
+          field.getType() == Descriptors.FieldDescriptor.Type.MESSAGE &&
           !field.isRepeated()) {
         size += CodedOutputStream.computeMessageSetExtensionSize(
             field.getNumber(), (Message) value);
@@ -195,18 +192,18 @@ public abstract class AbstractMessage extends AbstractMessageLite
 
   /** Get a hash code for given fields and values, using the given seed. */
   @SuppressWarnings("unchecked")
-  protected int hashFields(int hash, Map<FieldDescriptor, Object> map) {
-    for (Map.Entry<FieldDescriptor, Object> entry : map.entrySet()) {
-      FieldDescriptor field = entry.getKey();
+  protected int hashFields(int hash, Map<Descriptors.FieldDescriptor, Object> map) {
+    for (Map.Entry<Descriptors.FieldDescriptor, Object> entry : map.entrySet()) {
+      Descriptors.FieldDescriptor field = entry.getKey();
       Object value = entry.getValue();
       hash = (37 * hash) + field.getNumber();
-      if (field.getType() != FieldDescriptor.Type.ENUM){
+      if (field.getType() != Descriptors.FieldDescriptor.Type.ENUM){
         hash = (53 * hash) + value.hashCode();
       } else if (field.isRepeated()) {
-        List<? extends EnumLite> list = (List<? extends EnumLite>) value;
+        List<? extends Internal.EnumLite> list = (List<? extends Internal.EnumLite>) value;
         hash = (53 * hash) + hashEnumList(list);
       } else {
-        hash = (53 * hash) + hashEnum((EnumLite) value);
+        hash = (53 * hash) + hashEnum((Internal.EnumLite) value);
       }
     }
     return hash;
@@ -244,14 +241,14 @@ public abstract class AbstractMessage extends AbstractMessageLite
    * need to use the field number as the hash code to ensure compatibility
    * between statically and dynamically generated enum objects.
    */
-  protected static int hashEnum(EnumLite e) {
+  protected static int hashEnum(Internal.EnumLite e) {
     return e.getNumber();
   }
 
   /** Helper method for implementing {@link Message#hashCode()}. */
-  protected static int hashEnumList(List<? extends EnumLite> list) {
+  protected static int hashEnumList(List<? extends Internal.EnumLite> list) {
     int hash = 1;
-    for (EnumLite e : list) {
+    for (Internal.EnumLite e : list) {
       hash = 31 * hash + hashEnum(e);
     }
     return hash;
@@ -273,7 +270,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
     public abstract BuilderType clone();
 
     public BuilderType clear() {
-      for (final Map.Entry<FieldDescriptor, Object> entry :
+      for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
            getAllFields().entrySet()) {
         clearField(entry.getKey());
       }
@@ -303,14 +300,14 @@ public abstract class AbstractMessage extends AbstractMessageLite
       // TODO(kenton):  Provide a function somewhere called makeDeepCopy()
       //   which allows people to make secure deep copies of messages.
 
-      for (final Map.Entry<FieldDescriptor, Object> entry :
+      for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
            other.getAllFields().entrySet()) {
-        final FieldDescriptor field = entry.getKey();
+        final Descriptors.FieldDescriptor field = entry.getKey();
         if (field.isRepeated()) {
           for (final Object element : (List)entry.getValue()) {
             addRepeatedField(field, element);
           }
-        } else if (field.getJavaType() == FieldDescriptor.JavaType.MESSAGE) {
+        } else if (field.getJavaType() == Descriptors.FieldDescriptor.JavaType.MESSAGE) {
           final Message existingValue = (Message)getField(field);
           if (existingValue == existingValue.getDefaultInstanceForType()) {
             setField(field, entry.getValue());
@@ -363,8 +360,8 @@ public abstract class AbstractMessage extends AbstractMessageLite
     /** helper method to handle {@code builder} and {@code extensions}. */
     private static void addRepeatedField(
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
-        FieldDescriptor field,
+        FieldSet<Descriptors.FieldDescriptor> extensions,
+        Descriptors.FieldDescriptor field,
         Object value) {
       if (builder != null) {
         builder.addRepeatedField(field, value);
@@ -376,8 +373,8 @@ public abstract class AbstractMessage extends AbstractMessageLite
     /** helper method to handle {@code builder} and {@code extensions}. */
     private static void setField(
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
-        FieldDescriptor field,
+        FieldSet<Descriptors.FieldDescriptor> extensions,
+        Descriptors.FieldDescriptor field,
         Object value) {
       if (builder != null) {
         builder.setField(field, value);
@@ -389,8 +386,8 @@ public abstract class AbstractMessage extends AbstractMessageLite
     /** helper method to handle {@code builder} and {@code extensions}. */
     private static boolean hasOriginalMessage(
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
-        FieldDescriptor field) {
+        FieldSet<Descriptors.FieldDescriptor> extensions,
+        Descriptors.FieldDescriptor field) {
       if (builder != null) {
         return builder.hasField(field);
       } else {
@@ -401,8 +398,8 @@ public abstract class AbstractMessage extends AbstractMessageLite
     /** helper method to handle {@code builder} and {@code extensions}. */
     private static Message getOriginalMessage(
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
-        FieldDescriptor field) {
+        FieldSet<Descriptors.FieldDescriptor> extensions,
+        Descriptors.FieldDescriptor field) {
       if (builder != null) {
         return (Message) builder.getField(field);
       } else {
@@ -413,8 +410,8 @@ public abstract class AbstractMessage extends AbstractMessageLite
     /** helper method to handle {@code builder} and {@code extensions}. */
     private static void mergeOriginalMessage(
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
-        FieldDescriptor field,
+        FieldSet<Descriptors.FieldDescriptor> extensions,
+        Descriptors.FieldDescriptor field,
         Message.Builder subBuilder) {
       Message originalMessage = getOriginalMessage(builder, extensions, field);
       if (originalMessage != null) {
@@ -439,9 +436,9 @@ public abstract class AbstractMessage extends AbstractMessageLite
         CodedInputStream input,
         UnknownFieldSet.Builder unknownFields,
         ExtensionRegistryLite extensionRegistry,
-        Descriptor type,
+        Descriptors.Descriptor type,
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions,
+        FieldSet<Descriptors.FieldDescriptor> extensions,
         int tag) throws IOException {
       if (type.getOptions().getMessageSetWireFormat() &&
           tag == WireFormat.MESSAGE_SET_ITEM_TAG) {
@@ -453,7 +450,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
       final int wireType = WireFormat.getTagWireType(tag);
       final int fieldNumber = WireFormat.getTagFieldNumber(tag);
 
-      final FieldDescriptor field;
+      final Descriptors.FieldDescriptor field;
       Message defaultInstance = null;
 
       if (type.isExtensionNumber(fieldNumber)) {
@@ -472,7 +469,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
             field = extension.descriptor;
             defaultInstance = extension.defaultInstance;
             if (defaultInstance == null &&
-                field.getJavaType() == FieldDescriptor.JavaType.MESSAGE) {
+                field.getJavaType() == Descriptors.FieldDescriptor.JavaType.MESSAGE) {
               throw new IllegalStateException(
                   "Message-typed extension lacked default instance: " +
                   field.getFullName());
@@ -596,9 +593,9 @@ public abstract class AbstractMessage extends AbstractMessageLite
         CodedInputStream input,
         UnknownFieldSet.Builder unknownFields,
         ExtensionRegistryLite extensionRegistry,
-        Descriptor type,
+        Descriptors.Descriptor type,
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions) throws IOException {
+        FieldSet<Descriptors.FieldDescriptor> extensions) throws IOException {
 
       // The wire format for MessageSet is:
       //   message MessageSet {
@@ -683,9 +680,9 @@ public abstract class AbstractMessage extends AbstractMessageLite
         ExtensionRegistry.ExtensionInfo extension,
         ExtensionRegistryLite extensionRegistry,
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions) throws IOException {
+        FieldSet<Descriptors.FieldDescriptor> extensions) throws IOException {
 
-      FieldDescriptor field = extension.descriptor;
+      Descriptors.FieldDescriptor field = extension.descriptor;
       Message value = null;
       if (hasOriginalMessage(builder, extensions, field)) {
         Message originalMessage =
@@ -710,9 +707,9 @@ public abstract class AbstractMessage extends AbstractMessageLite
         ExtensionRegistry.ExtensionInfo extension,
         ExtensionRegistryLite extensionRegistry,
         Message.Builder builder,
-        FieldSet<FieldDescriptor> extensions) throws IOException {
+        FieldSet<Descriptors.FieldDescriptor> extensions) throws IOException {
 
-      FieldDescriptor field = extension.descriptor;
+      Descriptors.FieldDescriptor field = extension.descriptor;
       boolean hasOriginalValue = hasOriginalMessage(builder, extensions, field);
 
       if (hasOriginalValue || ExtensionRegistryLite.isEagerlyParseMessageSets()) {
@@ -756,7 +753,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
       return (BuilderType) this;
     }
 
-    public Message.Builder getFieldBuilder(final FieldDescriptor field) {
+    public Message.Builder getFieldBuilder(final Descriptors.FieldDescriptor field) {
       throw new UnsupportedOperationException(
           "getFieldBuilder() called on an unsupported message type.");
     }
@@ -785,19 +782,19 @@ public abstract class AbstractMessage extends AbstractMessageLite
     private static void findMissingFields(final MessageOrBuilder message,
                                           final String prefix,
                                           final List<String> results) {
-      for (final FieldDescriptor field :
+      for (final Descriptors.FieldDescriptor field :
           message.getDescriptorForType().getFields()) {
         if (field.isRequired() && !message.hasField(field)) {
           results.add(prefix + field.getName());
         }
       }
 
-      for (final Map.Entry<FieldDescriptor, Object> entry :
+      for (final Map.Entry<Descriptors.FieldDescriptor, Object> entry :
            message.getAllFields().entrySet()) {
-        final FieldDescriptor field = entry.getKey();
+        final Descriptors.FieldDescriptor field = entry.getKey();
         final Object value = entry.getValue();
 
-        if (field.getJavaType() == FieldDescriptor.JavaType.MESSAGE) {
+        if (field.getJavaType() == Descriptors.FieldDescriptor.JavaType.MESSAGE) {
           if (field.isRepeated()) {
             int i = 0;
             for (final Object element : (List) value) {
@@ -817,7 +814,7 @@ public abstract class AbstractMessage extends AbstractMessageLite
     }
 
     private static String subMessagePrefix(final String prefix,
-                                           final FieldDescriptor field,
+                                           final Descriptors.FieldDescriptor field,
                                            final int index) {
       final StringBuilder result = new StringBuilder(prefix);
       if (field.isExtension()) {

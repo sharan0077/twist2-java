@@ -98,7 +98,7 @@ class LiteralByteString extends ByteString {
 
     ByteString result;
     if (substringLength == 0) {
-      result = ByteString.EMPTY;
+      result = EMPTY;
     } else {
       result = new BoundedByteString(bytes, getOffsetIntoBytes() + beginIndex,
           substringLength);
