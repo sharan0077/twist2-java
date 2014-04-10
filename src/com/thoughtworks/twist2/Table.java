@@ -12,7 +12,15 @@ public class Table {
         rows = new ArrayList<List<String>>();
     }
 
-    public void addRow(List<String> row) {
+    void addRow(List<String> row) {
         rows.add(row);
+    }
+
+    public List<String> getColumnNames() {
+        return headers;
+    }
+
+    public List<List<String>> getRows() {
+        return rows;
     }
 }
