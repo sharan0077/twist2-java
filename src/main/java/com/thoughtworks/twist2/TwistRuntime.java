@@ -98,7 +98,8 @@ public class TwistRuntime {
 
     public static void main(String[] args) throws Exception {
         HashMap<MessageType, IMessageProcessor> messageProcessors = new HashMap<MessageType, IMessageProcessor>() {{
-            put(ExecutionStarting, new SpecificationExecutionStartingProcessor());
+            put(ExecutionStarting, new ExecutionStartingProcessor());
+            put(SpecExecutionStarting, new SpecExecutionStartingProcessor());
             put(ExecuteStep, new ExecuteStepProcessor());
             put(ExecutionEnding, new ExecutionEndingProcessor());
             put(StepValidateRequest, new ValidateStepProcessor());
@@ -108,6 +109,11 @@ public class TwistRuntime {
 
         Socket socket = connect();
         dispatchMessages(socket, messageProcessors);
+    }
+
+    private static void scanForHooks(Reflections reflections) {
+        HooksRegistry.setBeforeSpecHooks(reflections.getMethodsAnnotatedWith(BeforeSpec.class));
+        HooksRegistry.setAfterSpecHooks(reflections.getMethodsAnnotatedWith(AfterSpec.class));
     }
 
     private static void scanForStepImplementations() {
@@ -123,6 +129,7 @@ public class TwistRuntime {
                 StepRegistry.addStepImplementation(stepValueExtractor.getFor(annotation.value()), method);
             }
         }
+        scanForHooks(reflections);
     }
 
     static class MessageLength {

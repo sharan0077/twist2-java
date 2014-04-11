@@ -17,7 +17,6 @@ import static main.Messages.Message.MessageType;
 
 public class ExecuteStepProcessor implements IMessageProcessor {
 
-    private static Map<Class<?>, Object> methodToClassInstanceMap = new HashMap<Class<?>, Object>();
     private Map<Class<?>, StringToPrimitiveConverter> primitiveConverters = new HashMap<Class<?>, StringToPrimitiveConverter>();
 
     public ExecuteStepProcessor() {
@@ -46,7 +45,7 @@ public class ExecuteStepProcessor implements IMessageProcessor {
         try {
             execute(request.getStepText(), request.getArgsList());
             response = ExecuteStepResponse.newBuilder().setPassed(true).build();
-        } catch (Exception e) {
+        } catch (Throwable e) {
             ByteArrayOutputStream imageBytes = new ByteArrayOutputStream();
             try {
                 BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
@@ -88,11 +87,8 @@ public class ExecuteStepProcessor implements IMessageProcessor {
 
     private void execute(String stepText, List<Argument> args) throws Exception {
         Method method = StepRegistry.get(stepText);
-        Object classInstance = methodToClassInstanceMap.get(method.getDeclaringClass());
-        if (classInstance == null) {
-            classInstance = Class.forName(method.getDeclaringClass().getName()).newInstance();
-            methodToClassInstanceMap.put(method.getDeclaringClass(), classInstance);
-        }
+        Object classInstance = ClassInstanceManager.get(method.getDeclaringClass());
+
         if (args != null && args.size() > 0) {
             Object[] parameters = new Object[args.size()];
             Class<?>[] parameterTypes = method.getParameterTypes();
