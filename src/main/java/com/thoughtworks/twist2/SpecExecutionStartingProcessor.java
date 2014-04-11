@@ -14,16 +14,16 @@ public class SpecExecutionStartingProcessor implements IMessageProcessor {
             ExecutionStatus status = methodExecutor.execute(beforeSpecHook);
             if (!status.hasPassed()) {
                 return Message.newBuilder().setMessageId(message.getMessageId())
-                        .setMessageType(Message.MessageType.SpecExecutionStartingResponse)
-                        .setSpecExecutionStartingResponse(SpecExecutionStartingResponse.newBuilder().setExecutionStatus(status).build())
+                        .setMessageType(Message.MessageType.ExecutionStatusResponse)
+                        .setExecutionStatusResponse(ExecutionStatusResponse.newBuilder().setExecutionStatus(status).build())
                         .build();
             }
         }
 
         ExecutionStatus passingExecution = ExecutionStatus.newBuilder().setPassed(true).build();
         return Message.newBuilder().setMessageId(message.getMessageId())
-                .setMessageType(Message.MessageType.SpecExecutionStartingResponse)
-                .setSpecExecutionStartingResponse(SpecExecutionStartingResponse.newBuilder().setExecutionStatus(passingExecution).build())
+                .setMessageType(Message.MessageType.ExecutionStatusResponse)
+                .setExecutionStatusResponse(ExecutionStatusResponse.newBuilder().setExecutionStatus(passingExecution).build())
                 .build();
     }
 }

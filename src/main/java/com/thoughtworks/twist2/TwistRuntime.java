@@ -100,6 +100,7 @@ public class TwistRuntime {
         HashMap<MessageType, IMessageProcessor> messageProcessors = new HashMap<MessageType, IMessageProcessor>() {{
             put(ExecutionStarting, new ExecutionStartingProcessor());
             put(SpecExecutionStarting, new SpecExecutionStartingProcessor());
+            put(SpecExecutionEnding, new SpecExecutionEndingProcessor());
             put(ExecuteStep, new ExecuteStepProcessor());
             put(ExecutionEnding, new ExecutionEndingProcessor());
             put(StepValidateRequest, new ValidateStepProcessor());
