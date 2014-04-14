@@ -19,7 +19,6 @@ public class SpecExecutionStartingProcessor implements IMessageProcessor {
                         .build();
             }
         }
-
         ExecutionStatus passingExecution = ExecutionStatus.newBuilder().setPassed(true).build();
         return Message.newBuilder().setMessageId(message.getMessageId())
                 .setMessageType(Message.MessageType.ExecutionStatusResponse)

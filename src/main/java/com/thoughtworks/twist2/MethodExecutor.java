@@ -24,7 +24,7 @@ public class MethodExecutor {
             } catch (Exception ex) {
                 System.out.println("Screenshot is not available. " + ex.getMessage());
             }
-            ExecutionStatus.Builder builder = ExecutionStatus.newBuilder().setPassed(true);
+            ExecutionStatus.Builder builder = ExecutionStatus.newBuilder().setPassed(false);
             if (e.getCause() != null) {
                 builder.setErrorMessage(e.getCause().toString());
                 builder.setStackTrace(formatStackTrace(e.getCause().getStackTrace()));

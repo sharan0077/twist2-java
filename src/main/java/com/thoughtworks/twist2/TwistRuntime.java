@@ -67,18 +67,25 @@ public class TwistRuntime {
     private static void dispatchMessages(Socket socket, HashMap<MessageType, IMessageProcessor> messageProcessors) throws Exception {
         InputStream inputStream = socket.getInputStream();
         while (!socket.isClosed()) {
-            MessageLength messageLength = getMessageLength(inputStream);
-            byte[] bytes = toBytes(inputStream, messageLength.length);
-            Messages.Message message = Messages.Message.parseFrom(bytes);
-            if (!messageProcessors.containsKey(message.getMessageType())) {
-                System.out.println("Invalid message");
-            } else {
-                Messages.Message response = messageProcessors.get(message.getMessageType()).process(message);
-                writeMessage(socket, response);
-                if (message.getMessageType() == ExecutionEnding) {
-                    socket.close();
-                    break;
+            try {
+                MessageLength messageLength = getMessageLength(inputStream);
+                byte[] bytes = toBytes(inputStream, messageLength.length);
+                Messages.Message message = Messages.Message.parseFrom(bytes);
+                if (!messageProcessors.containsKey(message.getMessageType())) {
+                    System.out.println("Invalid message");
+                } else {
+                    IMessageProcessor messageProcessor = messageProcessors.get(message.getMessageType());
+                    Messages.Message response = messageProcessor.process(message);
+                    writeMessage(socket, response);
+                    if (message.getMessageType() == ExecutionEnding) {
+                        socket.close();
+                        break;
+                    }
                 }
+            }
+            catch (Throwable throwable) {
+                throwable.printStackTrace();
+                System.out.println(throwable.toString());
             }
         }
     }
@@ -101,6 +108,8 @@ public class TwistRuntime {
             put(ExecutionStarting, new ExecutionStartingProcessor());
             put(SpecExecutionStarting, new SpecExecutionStartingProcessor());
             put(SpecExecutionEnding, new SpecExecutionEndingProcessor());
+            put(ScenarioExecutionStarting, new ScenarioExecutionStartingProcessor());
+            put(ScenarioExecutionEnding, new ScenarioExecutionEndingProcessor());
             put(ExecuteStep, new ExecuteStepProcessor());
             put(ExecutionEnding, new ExecutionEndingProcessor());
             put(StepValidateRequest, new ValidateStepProcessor());
@@ -115,6 +124,8 @@ public class TwistRuntime {
     private static void scanForHooks(Reflections reflections) {
         HooksRegistry.setBeforeSpecHooks(reflections.getMethodsAnnotatedWith(BeforeSpec.class));
         HooksRegistry.setAfterSpecHooks(reflections.getMethodsAnnotatedWith(AfterSpec.class));
+        HooksRegistry.setBeforeScenarioHooks(reflections.getMethodsAnnotatedWith(BeforeScenario.class));
+        HooksRegistry.setAfterScenarioHooks(reflections.getMethodsAnnotatedWith(AfterScenario.class));
     }
 
     private static void scanForStepImplementations() {
